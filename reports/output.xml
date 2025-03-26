@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-26T15:24:06.525262" rpa="false" schemaversion="5">
+<suite id="s1" name="Python-Robotframework" source="C:\Users\01151982\Documents\Development\python-robotframework">
+<suite id="s1-s1" name="Tests" source="C:\Users\01151982\Documents\Development\python-robotframework\tests">
+<suite id="s1-s1-s1" name="Login Test" source="C:\Users\01151982\Documents\Development\python-robotframework\tests\login_test.robot">
+<test id="s1-s1-s1-t1" name="Login Saucedemo with id" line="18">
+<kw name="User Login to App" owner="StepDefinitions">
+<kw name="Open New Browser" owner="MainKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-26T15:24:07.610441" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-26T15:24:07.610154" elapsed="6.976070"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-26T15:24:14.587628" elapsed="0.066957"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<status status="PASS" start="2025-03-26T15:24:07.608742" elapsed="7.047389"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@id='user-name']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-26T15:24:14.657355" elapsed="0.094721"/>
+</kw>
+<status status="PASS" start="2025-03-26T15:24:07.607717" elapsed="7.144651"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-26T15:24:14.754366" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME[0]}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-26T15:24:14.752600" elapsed="0.293966"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-26T15:24:20.049479" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-26T15:24:15.047322" elapsed="5.002583"/>
+</kw>
+<kw name="Comment" owner="BuiltIn">
+<arg>Log</arg>
+<arg>${USERNAME[0]}</arg>
+<doc>Displays the given messages in the log file as keyword arguments.</doc>
+<status status="PASS" start="2025-03-26T15:24:20.050220" elapsed="0.000182"/>
+</kw>
+<status status="PASS" start="2025-03-26T15:24:07.607129" elapsed="12.443451"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-26T15:24:20.051099" elapsed="2.340694"/>
+</kw>
+<status status="PASS" start="2025-03-26T15:24:06.686505" elapsed="15.705571"/>
+</suite>
+<status status="PASS" start="2025-03-26T15:24:06.685235" elapsed="15.707660"/>
+</suite>
+<status status="PASS" start="2025-03-26T15:24:06.645681" elapsed="15.747631"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Python-Robotframework" id="s1" pass="1" fail="0" skip="0">Python-Robotframework</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Python-Robotframework.Tests</stat>
+<stat name="Login Test" id="s1-s1-s1" pass="1" fail="0" skip="0">Python-Robotframework.Tests.Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

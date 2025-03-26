@@ -7,4 +7,7 @@ Resource         ../resources/setup.robot
 *** Keywords ***
 User Login to App
    Open New Browser   ${BASE_URL}
-   Send Text To Element   id="user-name"   ${VALID_USERNAME}
+   Wait Until Element Is Visible   //input[@id='user-name']
+
+Input Username
+   Send Text To Element   ${ELEMENT}   ${TEXT}
