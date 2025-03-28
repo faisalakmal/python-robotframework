@@ -6,19 +6,16 @@ Resource         StepDefinitions.robot
 Click on Button
    [Arguments]   ${ELEMENT}
    Wait Until Element Is Visible   ${ELEMENT}
-   Capture Element Screenshot   ${ELEMENT}
    Click Button   ${ELEMENT}
 
 Click on Element
    [Arguments]   ${ELEMENT}
    Wait Until Element Is Visible   ${ELEMENT}
-   Capture Element Screenshot   ${ELEMENT}
    Click Element   ${ELEMENT}
 
 Click on Link
    [Arguments]   ${ELEMENT}
    Wait Until Element Is Visible   ${ELEMENT}
-   Capture Element Screenshot   ${ELEMENT}
    Click Link   ${ELEMENT}
 
 Open New Browser
@@ -28,5 +25,5 @@ Open New Browser
 
 Send Text To Element
    [Arguments]   ${ELEMENT}   ${TEXT}
-   Wait Until Element Is Visible   ${ELEMENT}   10s
+   Wait Until Element Is Visible   ${ELEMENT}   3s
    Input Text   ${ELEMENT}   ${TEXT}

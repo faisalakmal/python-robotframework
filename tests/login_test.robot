@@ -4,19 +4,28 @@ Library          SeleniumLibrary
 Library          Collections
 Resource         ../keywords/StepDefinitions.robot
 Resource         ../keywords/MainKeywords.robot
-Resource         ../resources/data.robot
 Resource         ../resources/setup.robot
-
-*** Variables ***
-@{my_list}       Apple   Banana   Orange
+Resource         ../resources/element.robot
+Resource         ../resources/data.robot
 
 *** Test Cases ***
 Login Saucedemo
-   User Login to App
+   Open Browser   https://www.saucedemo.com/   chrome
    Input Text   id=user-name   standard_user
+   Input Text   id=password   secret_sauce
+   Click Button   id=login-button
+   Sleep   3s
 
-Login Saucedemo with id
+Login Saucedemo
+   Open Browser   ${BASE_URL}   ${CHROME_BROWSER}
+   Input Text   ${E_USERNAME}   ${VALID_USERNAME}
+   Input Text   ${E_PASSWORD}   ${PASSWORD}
+   Click Button   ${E_BTN_LOGIN}
+   Sleep   3s
+
+Login Saucedemo
    User Login to App
-   Input Text   id=user-name   ${USERNAME[0]}
-   Sleep   5s
-   Comment   Log   ${USERNAME[0]}
+   Send Text To Element   id=user-name   ${USERNAME[0]}
+   Send Text To Element   id=password   ${PASSWORD}
+   Click on Button   id=login-button
+   Sleep   3s
