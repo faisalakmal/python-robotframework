@@ -27,7 +27,7 @@ pip install robotframework-seleniumlibrary
   ```
 Robot <name_file>.robot
   ```
-# Struktur Direktori
+# Structure Directory
 ```
 robot_project/
 ├── keywords
