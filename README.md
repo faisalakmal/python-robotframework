@@ -24,6 +24,7 @@ pip install robotframework-seleniumlibrary
   pip show robotframework-seleniumlibrary  
   ```
 # How to run?
+open your terminal and direct to project folder then running this code:
   ```
 Robot <name_file>.robot
   ```
