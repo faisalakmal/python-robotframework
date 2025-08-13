@@ -30,10 +30,20 @@ Robot <name_file>.robot
   ```
 # Structure Directory
 ```
-robot_project/
+├── README.md
 ├── keywords
+    ├── MainKeywords.robot
+    └── StepDefinitions.robot
 ├── reports
+    ├── log.html
+    ├── output.xml
+    ├── report.html
+    └── selenium-screenshot.png
 ├── resources
-├── tests
-└── READ.ME
+    ├── data.robot
+    ├── element.robot
+    └── setup.robot
+└── tests
+    └── login_test.robot
 ```
+
